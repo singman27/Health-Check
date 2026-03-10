@@ -5,3 +5,4 @@ whitenoise==6.6.0
 python-dotenv==1.0.0
 google-cloud-storage==2.10.0
 google-cloud-logging==3.8.0
+openai
