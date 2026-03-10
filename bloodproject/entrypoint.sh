@@ -6,6 +6,7 @@ set -e
 # Wait for database to be ready
 echo "Waiting for database..."
 python manage.py wait_for_db
+python manage.py createsuperuser --noinput || true
 
 # Run database migrations
 echo "Running database migrations..."
