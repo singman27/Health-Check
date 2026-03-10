@@ -10,7 +10,10 @@ python manage.py wait_for_db
 
 # Run database migrations
 echo "Running database migrations..."
-python manage.py migrate 
+python manage.py migrate sessions zero --fake
+python manage.py migrate sessions
+python manage.py migrate
+
 python manage.py shell -c "
 from django.contrib.auth import get_user_model
 User = get_user_model()
