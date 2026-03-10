@@ -9,7 +9,7 @@ python manage.py wait_for_db
 
 # Run database migrations
 echo "Running database migrations..."
-python manage.py migrate --fake
+python manage.py migrate 
 
 # Collect static files
 echo "Collecting static files..."
