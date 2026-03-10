@@ -10,7 +10,7 @@ python manage.py wait_for_db
 
 # Run database migrations
 echo "Running database migrations..."
-python manage.py migrate sessions zero --fake
+python manage.py migrate sessions zero --fake-initial
 python manage.py migrate sessions
 python manage.py migrate
 
