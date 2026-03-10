@@ -10,8 +10,7 @@ python manage.py wait_for_db
 
 # Run database migrations
 echo "Running database migrations..."
-python manage.py migrate sessions zero --fake-initial
-python manage.py migrate sessions
+python manage.py migrate sessions --fake
 python manage.py migrate
 
 python manage.py shell -c "
@@ -27,7 +26,7 @@ try:
     user.save()
     print('Superuser updated')
 except User.DoesNotExist:
-    User.objects.create_superuser('admin', 'adamritch172@gmail.com', pwd)
+    User.objects.create_superuser('admin', 'info@nutranourish.com', pwd)
     print('Superuser created')
 " || true
 
